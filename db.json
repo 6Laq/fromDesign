@@ -1,0 +1,65 @@
+{
+  "profile": [
+    {
+      "id": 1,
+      "name": "somename",
+      "followUps": [
+        {
+          "total": 5
+        },
+        {
+          "date": "06/06/66",
+          "address": "home"
+        }
+      ],
+      "details": {
+        "company": "name"
+      }
+    },
+    {
+      "name": "moose",
+      "followUps": [
+        {
+          "total": 5
+        },
+        {
+          "date": "06/06/66",
+          "address": "home"
+        }
+      ],
+      "details": {
+        "company": "kfc"
+      },
+      "id": 2
+    }
+  ],
+  "inventory": [
+    {
+      "id": 1,
+      "cost": 1000,
+      "items": 42,
+      "space": ""
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "cost": 890,
+      "moreService": 42,
+      "insurance": true
+    }
+  ],
+  "agreements": [
+    {
+      "id": "#23232",
+      "price": "$444",
+      "status": true,
+      "cosignees": {}
+    },
+    {
+      "price": 1200,
+      "status": true,
+      "id": "RDB8Ktb"
+    }
+  ]
+}
