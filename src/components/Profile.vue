@@ -10,19 +10,35 @@
         <h2>Benny Bahamas</h2>
       </span>
       <p>2/5 follow ups</p>
-      <div class="dates">
+      <!-- <div class="dates">
         <div class="date-set">
-          <span><i class="fas fa-arrow-up fa-xs "></i></span>
-          <small><b>03/03/88</b></small>
-          <small>address address address</small>
-          <i class="fas fa-chevron-right fa-xs"></i>
+          <p><i class="fas fa-arrow-up fa-xs "></i></p>
+          <p><b>03/03/88</b></p>
+          <p>address address address</p>
+          <p><i class="fas fa-chevron-right fa-xs"></i></p>
+        </div>
+      </div> -->
+      <div class="followups">
+        <div class="followup row middle-xs" v-for="followup of followups" :key="followup.address" >
+          <div class="col-xs-2">
+            icon
+          </div>
+          <div class="col-xs">
+            <div class="date">{{followup.date}}</div>
+            <div class="address">{{followup.address}}</div>
+          </div>
+          <div class="col-xs-2">
+            icon
+          </div>
         </div>
       </div>
     </div>
     <div class="details">
       <div class="details-title">
-        <i class="fas fa-align-left fa-xs"></i>
-        <h5>Details</h5>
+        <p>
+          <i class="fas fa-align-left fa-xs"></i>
+          Details
+        </p>
       </div>
       <div>
         <h5>Company</h5>
@@ -40,7 +56,14 @@
 import 'flexboxgrid';
 
 export default {
-  
+  data() {
+    return {
+      followups: [
+        {date: '03/06/18', address: '1212 elm st, New York, Ny 12323'},
+        {date: '03/06/18', address: '1232 tokyo ave, LA, CA 91021'}
+      ]
+    }
+  }
 }
 </script>
 
@@ -97,14 +120,29 @@ export default {
 
   .details-title{
     border-bottom: solid 1px lightgrey;
-    flex-direction: row;
+    text-align: left;
   }
 
 
   .date-set{
     width: 250px;
-    height: 50px;
+    height: 75px;
+    font-size: 15px;
     background-color: aquamarine;
-    flex-direction: column;
+    text-align: center;
+  }
+  .followup {
+    border-bottom: 1px solid rgba(0,0,0, 0.2);
+    padding: 10px 0px;
+  }
+
+  .address {
+    font-size: .8em;
+    color: grey;
+  }
+
+  .date {
+    font-size: 1em;
+    font-weight: bold;
   }
 </style>
