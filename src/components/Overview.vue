@@ -1,10 +1,14 @@
 <template>
   <div class="container">
-    <div class="row nav">
-      <h2>Overview</h2>
-      <h2>Services</h2>
-      <h2>Contract</h2>
-      <i class="fas fa-address-book fa-lg"></i>
+    <div class="row around-xs middle-xs">
+      <div class="col-xs-8 around-xs">
+        <span>Overview</span>
+        <span>Inventory</span>
+        <span>Services</span>
+        <span>Contract</span>
+      </div>
+        
+      <div class="col-xs"><i class="fas fa-address-book fa-lg"></i></div>
     </div>
     <div class="row content">
       <div class="booking">
@@ -50,19 +54,18 @@ export default {
     width: 700px;
     height: 700px;
     padding: 10px 30px 0px 30px;
-    background-color:lightgray;
+    background-color: rgba(250,250,250, .8);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
   }
 
   .content{
-    justify-content: center;
     margin: 30px 0px 0px 0px;
   }
 
   .booking{
     width: 540px;
-    height: 100px;
+    height: 75px;
     background-color: white;
     margin: 10px;
     padding: 10px;
@@ -97,8 +100,8 @@ export default {
   }
 
   .nav{
-    justify-content: space-around;
     border-bottom: solid 1px blue;
+    font-size: 1.2em;
   }
 
   i{

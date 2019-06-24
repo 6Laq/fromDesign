@@ -2,7 +2,7 @@
   <div id="app">
     
       <SideNav class="sidenav " />
-      <profile class="profile " />
+      <profile />
     
   
       <Overview class="overview " />
@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
   #app{
     display: flex;
     background-color: lightgrey;
@@ -33,6 +34,8 @@ export default {
     height: 700px;
     border-radius: 10px;
     overflow: hidden;
+    font-family: 'Lato', sans-serif;
   }
+
 
 </style>
