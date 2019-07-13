@@ -2,18 +2,38 @@
   "profile": [
     {
       "id": 1,
-      "name": "somename",
+      "firstName": "Daryl",
+      "lastName": "Moss",
       "followUps": [
         {
-          "total": 5
+          "date": "06/02/20",
+          "address": "1212 elm st, New York, Ny 12323",
+          "active": true
         },
         {
-          "date": "06/06/66",
-          "address": "home"
+          "date": "12/12/21",
+          "address": "1232 tokyo ave, LA, CA 91021",
+          "active": true
+        },
+        {
+          "date": "11/11/21",
+          "address": "home",
+          "active": false
+        },
+        {
+          "date": "10/10/20",
+          "address": "home",
+          "active": false
+        },
+        {
+          "date": "09/09/19",
+          "address": "home",
+          "active": false
         }
       ],
       "details": {
-        "company": "name"
+        "company": "East Bound and Down",
+        "assigned": "Alex Just"
       }
     },
     {
@@ -33,33 +53,35 @@
       "id": 2
     }
   ],
-  "inventory": [
+  "overview": [
     {
-      "id": 1,
-      "cost": 1000,
-      "items": 42,
-      "space": ""
-    }
-  ],
-  "services": [
-    {
-      "id": 1,
-      "cost": 890,
-      "moreService": 42,
-      "insurance": true
-    }
-  ],
-  "agreements": [
-    {
-      "id": "#23232",
-      "price": "$444",
-      "status": true,
-      "cosignees": {}
-    },
-    {
-      "price": 1200,
-      "status": true,
-      "id": "RDB8Ktb"
+      "inventory": {
+        
+          "cost": "$8900",
+          "items": "42",
+          "space": "4200 ft"
+        
+      },
+      "services": {
+        
+          "cost": "$8000",
+          "moreService": 42,
+          "insurance": true
+        
+      },
+      "agreements": [
+        {
+          "id": "#23232",
+          "price": "$444",
+          "status": true,
+          "cosignees": {}
+        },
+        {
+          "price": 1200,
+          "status": true,
+          "id": "RDB8Ktb"
+        }
+      ]
     }
   ]
 }

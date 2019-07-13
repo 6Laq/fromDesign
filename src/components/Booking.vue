@@ -8,8 +8,8 @@
           <div class="booking-type"><p>Ready for Booking</p></div>
           <div class="booking-sign"><p>Getting things booked out in the books</p></div>
         </div>
-        <div class="book-move col-xs-3">
-          <p>Book Move</p>
+        <div class="center-xs col-xs-3">
+          <p class="book-move">Book Move</p>
         </div>
       </div>
     </div>
@@ -23,5 +23,13 @@ export default {
 
 
 <style scoped>
+  .book-move {
+    background-color: lightblue;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    padding-top: 10px;
+  }
+
 
 </style>

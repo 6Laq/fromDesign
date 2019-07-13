@@ -31,8 +31,7 @@ export default {
     width: 50px;
     max-width: 50px;
     padding: 5px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-right: 1px solid lightgrey;
   }
 
   .top-icons, .lower-icons{

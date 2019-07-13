@@ -14,8 +14,8 @@
         </div>
         <div class="namedappt">
           <div class="name-plate m-bottom">
-            <h2>Benny</h2>
-            <h2>Bahamas</h2>
+            <h2>{{profile.firstName}}</h2>
+            <h2>{{profile.lastName}}</h2>
           </div>
           <div class="i-group m-bottom">
             <i class="fas fa-arrow-up fa-xs p-icon"></i>
@@ -23,11 +23,11 @@
             <i class="fas fa-arrow-up fa-xs p-icon"></i>
           </div> 
           <div class="m-bottom">
-            <div>2/5 follow ups</div>
-            <progress value="2" max="5" class="progress-bar col-xs-11"></progress>
+            <div>{{activeFollowUpCount}}/{{profile.followUps.length}} follow ups</div>
+            <progress value="2" max="5" class="progress-bar"></progress>
           </div>
           <div class="followups">
-            <div class="followup row middle-xs" v-for="followup of followups" :key="followup.address" >
+            <div class="followup row middle-xs" v-for="followup of activeFollowUps" :key="followup.date" >
               <div class="col-xs-2 arrow">
                 <i class="fas fa-arrow-up fa-xs "></i>
               </div>
@@ -54,12 +54,12 @@
           </div>
           <div class="under-details">
             <div class="row between-xs m-bottom">
-              <div class="col-xs-4 s-text">company</div>
-              <div class="col-xs-8 s-text">East coast movers</div>
+              <div class="col-xs-4 s-text">Company</div>
+              <div class="col-xs-8 s-text end-xs">{{profile.details.company}}</div>
             </div>
             <div class="row m-bottom between-xs">
-              <div class="col-xs-4 s-text">Assigned To</div>
-              <div class="col-xs-8 s-text">Alex Just</div>
+              <div class="col-xs-5 s-text">Assigned To</div>
+              <div class="col-xs-7 s-text end-xs">{{profile.details.assigned}}</div>
             </div>
           </div>
         </div>
@@ -87,12 +87,22 @@
 
 
 export default {
+  props: {
+    profile: {
+      type: Object
+    }
+  },
+  computed: {
+    activeFollowUpCount() {
+      return this.profile.followUps.filter(followUp => followUp.active).length
+    },
+    activeFollowUps() {
+      return this.profile.followUps.filter(followUp => followUp.active)
+    }
+  },
   data() {
     return {
-      followups: [
-        {date: '03/06/18', address: '1212 elm st, New York, Ny 12323'},
-        {date: '03/06/18', address: '1232 tokyo ave, LA, CA 91021'}
-      ]
+      
     }
   }
 }
